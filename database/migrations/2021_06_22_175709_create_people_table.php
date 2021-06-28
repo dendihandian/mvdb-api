@@ -18,6 +18,7 @@ class CreatePeopleTable extends Migration
             $table->string('last_name');
             $table->string('first_name')->nullable();
             $table->string('middle_name')->nullable();
+            $table->string('alias')->nullable();
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->date('birth_date')->nullable();
             $table->timestamps();

@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\Api\v1\FindMovieMiddleware;
+use App\Http\Middleware\Api\v1\FindPersonMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -65,6 +66,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
         // Resource Finder Middlewares
+        // TODO: Could these middlewares be unified?
         'find_movie' => FindMovieMiddleware::class,
+        'find_person' => FindPersonMiddleware::class,
     ];
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\v1\MovieController;
+use App\Http\Controllers\Api\v1\PersonController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,17 @@ Route::prefix('v1')->group(function(){
             Route::get('/', [MovieController::class, 'show']);
             Route::put('/', [MovieController::class, 'update']);
             Route::delete('/', [MovieController::class, 'destroy']);
+        });
+    });
+
+    Route::prefix('people')->group(function(){
+        Route::get('/', [PersonController::class, 'index']);
+        Route::post('/', [PersonController::class, 'store']);
+
+        Route::prefix('{personId}')->middleware(['find_person'])->group( function(){
+            Route::get('/', [PersonController::class, 'show']);
+            Route::put('/', [PersonController::class, 'update']);
+            Route::delete('/', [PersonController::class, 'destroy']);
         });
     });
 });
