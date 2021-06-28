@@ -9,7 +9,7 @@
 			"name": "v1",
 			"item": [
 				{
-					"name": "Movies",
+					"name": "Movie",
 					"item": [
 						{
 							"name": "Movie List",
@@ -209,7 +209,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"last_name\": \"Shyamalan\",\r\n    \"middle_name\": \"Nelliyattu\",\r\n    \"first_name\": \"Manoj\",\r\n    \"alias\": \"M. Night\",\r\n    \"gender\": \"male\",\r\n    \"birth_date\": \"1970-08-06\"\r\n}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -328,6 +328,78 @@
 						"type": "text/javascript",
 						"exec": [
 							"pm.globals.set(\"base_url\", \"http://mvdb-api.test/api/v1\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "GraphQL",
+			"item": [
+				{
+					"name": "Movie",
+					"item": [
+						{
+							"name": "Movie List",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\r\n  movie(id: 1) {\r\n    id,\r\n    title,\r\n    year,\r\n    released_date\r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}",
+									"host": [
+										"{{base_url}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Movie Detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\r\n  movies {\r\n    id,\r\n    title,\r\n    year,\r\n    released_date\r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}",
+									"host": [
+										"{{base_url}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"base_url\", \"http://mvdb-api.test/graphql\");"
 						]
 					}
 				},

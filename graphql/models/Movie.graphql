@@ -1,0 +1,11 @@
+extend type Query {
+    movies: [Movie!]! @all
+    movie(id: Int! @eq): Movie @find
+}
+
+type Movie {
+    id: ID!
+    title: String!
+    year: Int!,
+    released_date: Date
+}
