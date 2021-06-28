@@ -23,12 +23,18 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/movies",
+									"raw": "{{base_url}}/movies?page=1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"movies"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
 									]
 								}
 							},
@@ -150,6 +156,162 @@
 									],
 									"path": [
 										"movies",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Person",
+					"item": [
+						{
+							"name": "Person List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/people?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"people"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Person Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"last_name\": \"Shyamalan\",\r\n    \"middle_name\": \"Nelliyattu\",\r\n    \"first_name\": \"Manoj\",\r\n    \"alias\": \"M. Night\",\r\n    \"gender\": \"male\",\r\n    \"birth_date\": \"1970-08-06\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/people",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"people"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Person Detail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/people/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"people",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Person Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"last_name\": \"Shyamalan\",\r\n    \"middle_name\": \"Nelliyattu\",\r\n    \"first_name\": \"Manoj\",\r\n    \"alias\": \"M. Night\",\r\n    \"gender\": \"male\",\r\n    \"birth_date\": \"1970-08-06\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/people/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"people",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Person Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"{{$randomLoremSentence}}\",\r\n    \"year\": 1945,\r\n    \"released_date\": \"2020-05-05\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/people/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"people",
 										"1"
 									]
 								}

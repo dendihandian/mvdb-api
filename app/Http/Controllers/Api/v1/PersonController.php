@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Api\v1\PersonCollection;
+use App\Http\Resources\Api\v1\PersonResource;
 use App\Models\Person;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,32 +13,36 @@ class PersonController extends Controller
 {
     public function index()
     {
-        return response(Person::all(), Response::HTTP_OK);
+        $people = Person::paginate(10);
+        return response(new PersonCollection($people), Response::HTTP_OK);
     }
 
     public function store(Request $request)
     {
         $person = $this->save($request);
 
-        return response($person, Response::HTTP_CREATED);
+        return response(new PersonResource($person), Response::HTTP_CREATED);
     }
 
     public function show(Request $request)
     {
         $person = $request->person;
-        return response($person, Response::HTTP_OK);
+
+        return response(new PersonResource($person), Response::HTTP_OK);
     }
 
     public function update(Request $request)
     {
         $person = $this->save($request);
-        return response($person, Response::HTTP_OK);
+
+        return response(new PersonResource($person), Response::HTTP_OK);
     }
 
     public function destroy(Request $request)
     {
         $person = $request->person;
         $person->delete();
+
         return response('', Response::HTTP_OK);
     }
 
