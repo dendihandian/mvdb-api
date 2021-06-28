@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\v1\MovieRequest;
 use App\Http\Resources\Api\v1\MovieCollection;
 use App\Http\Resources\Api\v1\MovieResource;
 use App\Models\Movie;
@@ -17,7 +18,7 @@ class MovieController extends Controller
         return response(new MovieCollection($movies), Response::HTTP_OK);
     }
 
-    public function store(Request $request)
+    public function store(MovieRequest $request)
     {
         $movie = $this->save($request);
 
@@ -31,7 +32,7 @@ class MovieController extends Controller
         return response(new MovieResource($movie), Response::HTTP_OK);
     }
 
-    public function update(Request $request)
+    public function update(MovieRequest $request)
     {
         $movie = $this->save($request);
 

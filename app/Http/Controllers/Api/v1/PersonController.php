@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\v1\PersonRequest;
 use App\Http\Resources\Api\v1\PersonCollection;
 use App\Http\Resources\Api\v1\PersonResource;
 use App\Models\Person;
@@ -17,7 +18,7 @@ class PersonController extends Controller
         return response(new PersonCollection($people), Response::HTTP_OK);
     }
 
-    public function store(Request $request)
+    public function store(PersonRequest $request)
     {
         $person = $this->save($request);
 
@@ -31,7 +32,7 @@ class PersonController extends Controller
         return response(new PersonResource($person), Response::HTTP_OK);
     }
 
-    public function update(Request $request)
+    public function update(PersonRequest $request)
     {
         $person = $this->save($request);
 
