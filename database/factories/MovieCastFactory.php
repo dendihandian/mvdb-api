@@ -27,7 +27,8 @@ class MovieCastFactory extends Factory
             },
             'person_id' => function() {
                 return PersonFactory::new()->create()->id;
-            }
+            },
+            'character_name' => $this->faker->name(),
         ];
     }
 }
