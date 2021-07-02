@@ -17,17 +17,19 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/movies?page=1",
+									"raw": "{{base_url}}/api/v1/movies?page=1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"movies"
 									],
 									"query": [
@@ -46,8 +48,8 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
@@ -61,11 +63,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/movies",
+									"raw": "{{base_url}}/api/v1/movies",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"movies"
 									]
 								}
@@ -78,17 +82,19 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/movies/1",
+									"raw": "{{base_url}}/api/v1/movies/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"movies",
 										"1"
 									]
@@ -102,8 +108,8 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
@@ -117,11 +123,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/movies/1",
+									"raw": "{{base_url}}/api/v1/movies/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"movies",
 										"1"
 									]
@@ -135,8 +143,8 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
@@ -150,11 +158,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/movies/1",
+									"raw": "{{base_url}}/api/v1/movies/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"movies",
 										"1"
 									]
@@ -173,17 +183,19 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/people?page=1",
+									"raw": "{{base_url}}/api/v1/people?page=1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"people"
 									],
 									"query": [
@@ -202,8 +214,8 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
@@ -217,11 +229,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/people",
+									"raw": "{{base_url}}/api/v1/people",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"people"
 									]
 								}
@@ -234,17 +248,19 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/people/1",
+									"raw": "{{base_url}}/api/v1/people/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"people",
 										"1"
 									]
@@ -258,8 +274,8 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
@@ -273,11 +289,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/people/1",
+									"raw": "{{base_url}}/api/v1/people/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"people",
 										"1"
 									]
@@ -291,8 +309,8 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Accept",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
 										"type": "text"
 									}
 								],
@@ -306,11 +324,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/people/1",
+									"raw": "{{base_url}}/api/v1/people/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"api",
+										"v1",
 										"people",
 										"1"
 									]
@@ -327,7 +347,7 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"pm.globals.set(\"base_url\", \"http://mvdb-api.test/api/v1\");"
+							""
 						]
 					}
 				},
@@ -361,9 +381,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}",
+									"raw": "{{base_url}}/graphql",
 									"host": [
 										"{{base_url}}"
+									],
+									"path": [
+										"graphql"
 									]
 								}
 							},
@@ -382,9 +405,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}",
+									"raw": "{{base_url}}/graphql",
 									"host": [
 										"{{base_url}}"
+									],
+									"path": [
+										"graphql"
 									]
 								}
 							},
@@ -399,7 +425,7 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"pm.globals.set(\"base_url\", \"http://mvdb-api.test/graphql\");"
+							""
 						]
 					}
 				},
@@ -413,6 +439,230 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "OAuth2",
+			"item": [
+				{
+					"name": "Get Clients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/oauth/clients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"oauth",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"base_url\", \"http://mvdb-api.test\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{$randomFirstName}} {{$randomLastName}}\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200) {\r",
+									"    pm.collectionVariables.set(\"token\", pm.response.json().token);\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/auth/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/auth/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"base_url\", \"http://mvdb-api.test\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "base_url",
+			"value": "http://mvdb-api.test"
 		}
 	]
 }
