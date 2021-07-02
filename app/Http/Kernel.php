@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\Api\v1\FindMovieMiddleware;
 use App\Http\Middleware\Api\v1\FindPersonMiddleware;
+use App\Http\Middleware\JsonMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -23,6 +24,9 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+
+        // Force to always return json
+        JsonMiddleware::class,
     ];
 
     /**
